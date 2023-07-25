@@ -11,8 +11,8 @@ function apply(){
   let cookie=document.cookie
   let split=cookie.split(';')
 	console.log(split)
-  //let fontsize=(split[0].split('='))[1]
- // let color=(split[1].split('='))[1]
- // r.style.setProperty('--fontsize',fontsize);
- // r.style.setProperty('--fontcolor',color);
+  let fontsize=(split[15].split('='))[1]
+ let color=(split[16].split('='))[1]
+  r.style.setProperty('--fontsize',fontsize);
+  r.style.setProperty('--fontcolor',color);
 }
