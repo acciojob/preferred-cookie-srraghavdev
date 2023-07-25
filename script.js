@@ -15,7 +15,7 @@ function apply(){
   for(let i=0;i<split.length;i++){
     let temp=(split[i]).split('=')
     console.log(temp)
-    if(temp[0]=='fontsize'){
+    if(temp[0]==' fontsize'){
       fontsize=temp[1]
     }
     else if(temp[0]==' color'){
