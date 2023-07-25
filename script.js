@@ -8,11 +8,20 @@ c.addEventListener('submit',(event)=>{
 	document.cookie=`color=${d[1].value}`
 })
 function apply(){
+  let fontsize=0
+  let color=0
   let cookie=document.cookie
   let split=cookie.split(';')
-	console.log(split)
-  let fontsize=(split[15].split('='))[1]
- let color=(split[16].split('='))[1]
+  for(let i=0;i<split.length;i++){
+    let temp=(split[i]).split('=')
+    console.log(temp)
+    if(temp[0]=='fontsize'){
+      fontsize=temp[1]
+    }
+    else if(temp[0]==' color'){
+      color=temp[1]
+    }
+  }
   r.style.setProperty('--fontsize',fontsize);
   r.style.setProperty('--fontcolor',color);
 }
